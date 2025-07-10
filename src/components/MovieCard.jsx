@@ -1,10 +1,13 @@
 
 const MovieCard = ({movie}) => {
+    const handleClick = () =>{
+        alert('niice');
+    }
   return (
     <div>
         <div>
             <img src={movie.poster} alt={movie.title}/>
-            <button>❤︎</button>
+            <button onClick={handleClick}>❤︎</button>
         </div>
         <div>
             <h3>{movie.title}</h3>
