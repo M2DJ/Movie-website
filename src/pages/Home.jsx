@@ -1,9 +1,30 @@
+import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
+import { getPopularMovies } from "../services/api";
 
 const Home = () => {
-    const movies = [
-        {id: 1, title:"Saif's film", release_date:"2004"},
-    ];
+    const [movies, setMovies] = useState([]);
+    const [search, setSearch] = useState("");
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const loadPopularMovies = async() => {
+            try{
+                const popluar = await getPopularMovies();
+                setMovies(popluar);
+            } catch(err) {
+                console.log(err);
+                setError('Failed to load movies');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        loadPopularMovies();
+    }, []);
+
+    
 
   return (
     <div>
