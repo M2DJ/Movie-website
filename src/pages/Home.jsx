@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { getPopularMovies, searchMovies } from "../services/api";
+import '../css/Home.css'
 
 const Home = () => {
     const [movies, setMovies] = useState([]);
@@ -49,15 +50,19 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className="home-container">
         {/* This is the search form */}
-        <form onSubmit={handleSearch}>
-            <input type='text' onChange={e => setSearch(e.target.value)} placeholder="Search for movies..."/>
-            <button>Submit</button>
-        </form>
+        <div className="search-bar-container">
+            <form className="search-form" onSubmit={handleSearch}>
+                <input className="search-input" type='text' onChange={e => setSearch(e.target.value)} placeholder="Search for movies..."/>
+                <button className="search-btn">Submit</button>
+            </form>
+        </div>
         {/* This is the div that displays the Movies */}
-        <div>
-            {movies.map(movie => <MovieCard movie={movie} key={movie.id}/>)}
+        <div className="movie-container">
+            <div className="movies">
+                {movies.map(movie => <MovieCard movie={movie} key={movie.id}/>)}
+            </div>
         </div>
     </div>
   )
