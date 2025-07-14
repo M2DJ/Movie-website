@@ -31,7 +31,7 @@
   border: none;
   transition: background-color 0.2s;
 }
-.favorite-btn:active {
+.favorite-btn.active {
   color: red;
 }
 .favorite-btn:hover {
