@@ -11,7 +11,7 @@
   align-items: center;
 }
 .search-input {
-    width: 400px;
+  width: 400px;
   height: 40px;
   margin-right: 15px;
   padding: 0.2rem 1rem;
@@ -38,10 +38,15 @@
   background-color: #f40612;
 }
 
-.movie-container{
-    
+.movie-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-.movies{
-    display: grid;
-    /* grid-template-columns: 600px 600px 100px; */
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
 }
