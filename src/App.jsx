@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import Favorites from './pages/Favorites'
 import { MovieProvider } from './context/MovieContext'
+import Reviews from './pages/Reviews'
 
 function App() {
   return (
