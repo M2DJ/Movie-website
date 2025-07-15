@@ -1,5 +1,11 @@
+import { useLocation } from "react-router-dom"
 
 const MovieReview = () => {
+  const { state } = useLocation();
+  const movie = state?.movie;
+
+  if(!movie) return <div>Movie not found</div>
+
   return (
     <div className="movie-review-container">
         <div className="movie-details">
