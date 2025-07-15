@@ -13,6 +13,7 @@ const MovieCard = ({ movie }) => {
   };
 
   return (
+    // now the movie prop is passed to the review component
     <Link to={`/movie/${movie.title}`} state={{ movie }} className="movie-card-container">
       <div className="movie-image-container">
         <img
