@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { getPopularMovies, searchMovies } from "../services/api";
 import "../css/Home.css";
-import { Link } from "react-router-dom";
+import MovieReview from "../components/MovieReview";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -67,7 +67,7 @@ const Home = () => {
           <button className="search-btn">Submit</button>
         </form>
       </div>
-      {error && setError("Failed to load movies")};
+      {error && <div className="error-message">{error}</div>};
       {/* This is the div that displays the Movies */}
       <div className="movie-container">
         <div className="movies">

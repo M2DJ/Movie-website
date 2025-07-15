@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import Favorites from './pages/Favorites'
 import { MovieProvider } from './context/MovieContext'
-import Reviews from './pages/Reviews'
+import MovieReview from './components/MovieReview'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/favorites' element={<Favorites />}/>
+          <Route path='/movie/review/:title' element={<MovieReview />}/>
         </Routes>
       </main>
     </MovieProvider>

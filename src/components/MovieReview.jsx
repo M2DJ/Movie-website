@@ -1,5 +1,5 @@
 
-const MovieReview = ({movie}) => {
+const MovieReview = () => {
   return (
     <div className="movie-review-container">
         <div className="movie-details">
