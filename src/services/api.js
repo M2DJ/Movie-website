@@ -17,8 +17,8 @@ export const searchMovies = async (movie) => {
   return data.results;
 };
 
-export const movieReview = async(movie) => {
-  const response = await fetch(`${BASE_URL}/movie/${movie.id}/reviews?api_key=${API_KEY}`);
+export const movieReview = async(movieId) => {
+  const response = await fetch(`${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`);
   const data = await response.json();
   return data.results;
 }
