@@ -1,5 +1,5 @@
 import "../css/MovieReview.css";
-import avatar from '../../public/images/default-avatar.jpg';
+import avatar from '../assets/images/default-avatar.jpg';
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { movieReview } from "../services/api";
