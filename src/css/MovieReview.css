@@ -37,3 +37,21 @@
 .review-content{
     margin-bottom: 40px;
 }
+
+@media (max-width: 425px) {
+    .movie-review-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-review h1{
+        margin-top: 60px;
+        margin-bottom: 60PX;
+    }
+}
+
+@media (max-width: 2560px) {
+    .reviews{
+        max-height: 1000px;
+    }
+}
