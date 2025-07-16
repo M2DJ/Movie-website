@@ -16,3 +16,24 @@
     flex-grow: 1;
     padding-left: 40px;
 }
+
+.reviews{
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 10px; 
+}
+
+.review-author{
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+.avatar{
+    width: 45px;
+    height: 49px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.review-content{
+    margin-bottom: 40px;
+}

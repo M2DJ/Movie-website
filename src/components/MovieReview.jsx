@@ -1,5 +1,6 @@
-import { useLocation } from "react-router-dom";
 import "../css/MovieReview.css";
+import avatar from '../../public/images/default-avatar.jpg';
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { movieReview } from "../services/api";
 
@@ -24,7 +25,7 @@ const MovieReview = () => {
         setLoading(false);
       }
     };
-    
+
     loadReviews();
   }, []);
 
@@ -41,9 +42,24 @@ const MovieReview = () => {
       />
       <div className="movie-review">
         <h1>{movie.title}</h1>
-        <div>
+        <div className="reviews">
           {reviews.length > 0 ? (
-            reviews.map((review) => <p>{review.content}</p>)
+            reviews.map((review) => (
+              <div>
+                <div className="review-author">
+                  <img
+                  className="avatar"
+                    src={
+                      review.author_details.avatar_path != null
+                        ? `https://image.tmdb.org/t/p/w45/${review.author_details.avatar_path}`
+                        : avatar
+                    }
+                  />
+                  <h3>{review.author_details.username}</h3>
+                </div>
+                <p className="review-content">{review.content}</p>
+              </div>
+            ))
           ) : (
             <p>No reviews found for this movie.</p>
           )}
