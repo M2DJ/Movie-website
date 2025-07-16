@@ -64,7 +64,7 @@ const Home = () => {
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for movies..."
           />
-          <button className="search-btn">Submit</button>
+          <button className="search-btn">Search</button>
         </form>
       </div>
       {error && <div className="error-message">{error}</div>}
