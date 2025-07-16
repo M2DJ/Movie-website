@@ -67,7 +67,7 @@ const Home = () => {
           <button className="search-btn">Submit</button>
         </form>
       </div>
-      {error && <div className="error-message">{error}</div>};
+      {error && <div className="error-message">{error}</div>}
       {/* This is the div that displays the Movies */}
       <div className="movie-container">
         <div className="movies">
