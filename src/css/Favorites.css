@@ -20,6 +20,50 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.favorite-movies{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .favorite-movies h1{
     text-align: center;
+}
+
+.favorited{
+    max-width: 300px;
+    max-height: 500px;
+}
+@media(max-width: 2560px){
+    .favorited{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px;
+        justify-content: center;
+    }
+}
+@media (max-width: 1440px){
+    .favorited{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px){
+    .favorited{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+}
+@media (max-width: 425px){
+    .favorited{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }

@@ -10,7 +10,7 @@ const Favorites = () => {
       <div className="favorites-container">
         <div className="favorite-movies">
           <h1>Your Favorites</h1>
-          <div className="movies">
+          <div className="favorited">
             {favorites.map((movie) => (
               <MovieCard movie={movie} key={movie.id} />
             ))}
